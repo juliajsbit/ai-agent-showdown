@@ -1,0 +1,72 @@
+[
+  {
+    "id": "q-pto-days",
+    "question": "How many PTO days do full-time employees get per year?",
+    "gold_doc_ids": ["hr-pto"],
+    "must_include": ["20"],
+    "reference_answer": "Full-time employees accrue 20 days of paid time off per year."
+  },
+  {
+    "id": "q-pto-rollover",
+    "question": "How many unused PTO days can I roll over to next year?",
+    "gold_doc_ids": ["hr-pto"],
+    "must_include": ["10"],
+    "reference_answer": "Up to 10 unused PTO days roll over; anything above that on December 31 is forfeited."
+  },
+  {
+    "id": "q-office-days",
+    "question": "Which days am I expected in the office?",
+    "gold_doc_ids": ["hr-remote"],
+    "must_include": ["Tuesday", "Wednesday"],
+    "reference_answer": "Employees are expected in the office on Tuesday and Wednesday."
+  },
+  {
+    "id": "q-parental",
+    "question": "How much paid parental leave does the company offer?",
+    "gold_doc_ids": ["hr-parental"],
+    "must_include": ["16"],
+    "reference_answer": "16 weeks of fully paid parental leave for all new parents."
+  },
+  {
+    "id": "q-atlas-payload",
+    "question": "What is the payload capacity of the Atlas-7 arm?",
+    "gold_doc_ids": ["prod-atlas-specs"],
+    "must_include": ["12"],
+    "reference_answer": "The Atlas-7 has a payload capacity of 12 kg."
+  },
+  {
+    "id": "q-atlas-battery-life",
+    "question": "How long does the Atlas-7 battery last and how much does it cost?",
+    "gold_doc_ids": ["prod-atlas-battery"],
+    "must_include": ["4 hours", "1,200"],
+    "reference_answer": "The optional battery pack gives up to 4 hours of operation and costs 1,200 dollars."
+  },
+  {
+    "id": "q-titan-speed",
+    "question": "How fast is the Titan-3 mobile base?",
+    "gold_doc_ids": ["prod-titan-specs"],
+    "must_include": ["1.8"],
+    "reference_answer": "The Titan-3 moves at a top speed of 1.8 meters per second."
+  },
+  {
+    "id": "q-warranty",
+    "question": "What is the warranty period on the hardware?",
+    "gold_doc_ids": ["sup-warranty", "prod-atlas-specs"],
+    "must_include": ["2-year"],
+    "reference_answer": "All hardware carries a 2-year limited warranty."
+  },
+  {
+    "id": "q-api-ratelimit",
+    "question": "What are the rate limits on the control API?",
+    "gold_doc_ids": ["eng-api"],
+    "must_include": ["100"],
+    "reference_answer": "The REST API allows 100 requests per second per device."
+  },
+  {
+    "id": "q-combo",
+    "question": "Can the Titan-3 carry the Atlas-7 arm, and what Python version does the SDK need?",
+    "gold_doc_ids": ["prod-titan-specs", "eng-api"],
+    "must_include": ["mounting plate", "3.10"],
+    "reference_answer": "Yes, the Titan-3 mounts the Atlas-7 via the standard mounting plate, and the Python SDK needs Python 3.10 or newer."
+  }
+]

@@ -1,0 +1,15 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: showdown-pg
+    environment:
+      POSTGRES_USER: showdown
+      POSTGRES_PASSWORD: showdown
+      POSTGRES_DB: showdown
+    ports:
+      - "5433:5432"   # 5433 on host to avoid clashing with a local postgres on 5432
+    volumes:
+      - showdown_pgdata:/var/lib/postgresql/data
+
+volumes:
+  showdown_pgdata:
