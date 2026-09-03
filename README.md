@@ -70,7 +70,8 @@ docker compose up -d
 - [x] Eval harness + comparison table
 - [x] LangGraph agent (baseline)
 - [x] CrewAI agent
-- [ ] Remaining 4 frameworks (AutoGen, OpenAI Agents SDK, Pydantic AI, LlamaIndex)
+- [x] AutoGen agent
+- [ ] Remaining 3 frameworks (OpenAI Agents SDK, Pydantic AI, LlamaIndex)
 
 ## Results
 
@@ -78,5 +79,6 @@ docker compose up -d
 | Framework | Task success | Citations | Reliability | Avg latency | Avg tool calls | Cost / 10 Q |
 |---|---|---|---|---|---|---|
 | langgraph | 100% | 100% | 100% | 4.47s | 1.1 | $0.0263 |
+| autogen | 100% | 100% | 100% | 2.84s | 1.2 | $0.0274 |
 | crewai | 100% | 100% | 100% | 3.40s | 1.1 | $0.0338 |
 <!-- RESULTS:END -->
