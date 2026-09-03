@@ -3,7 +3,13 @@
 import os
 from pathlib import Path
 
+from dotenv import load_dotenv
+
 ROOT = Path(__file__).resolve().parent.parent
+
+# Load .env once, here, so every framework picks up the same secrets no matter
+# what order it imports things in.
+load_dotenv(ROOT / ".env")
 DATA_DIR = ROOT / "data"
 CORPUS_PATH = DATA_DIR / "corpus.json"
 EVAL_PATH = DATA_DIR / "eval_set.json"
@@ -35,3 +41,11 @@ PRICE_OUT_PER_MTOK = 5.00
 
 def cost_usd(input_tokens: int, output_tokens: int) -> float:
     return (input_tokens / 1_000_000) * PRICE_IN_PER_MTOK + (output_tokens / 1_000_000) * PRICE_OUT_PER_MTOK
+
+
+# Identity-linked API keys must send the workspace id on every request. Shared so
+# all six frameworks authenticate the same way. Read at call time, not cached, so
+# import order can never leave it empty.
+def anthropic_headers() -> dict[str, str]:
+    wid = os.getenv("ANTHROPIC_WORKSPACE_ID")
+    return {"anthropic-workspace-id": wid} if wid else {}

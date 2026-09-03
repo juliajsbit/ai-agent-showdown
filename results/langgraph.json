@@ -1,0 +1,227 @@
+{
+  "summary": {
+    "framework": "langgraph",
+    "task_success": 0.9,
+    "citation_accuracy": 0.9,
+    "reliability": 1.0,
+    "avg_latency_s": 3.520752062401152,
+    "p95_latency_s": 6.437737125001149,
+    "avg_tool_calls": 1.1,
+    "total_cost_usd": 0.024241,
+    "n": 10
+  },
+  "rows": [
+    {
+      "grade": {
+        "id": "q-pto-days",
+        "answer_ok": true,
+        "missing_facts": [],
+        "citation_ok": true,
+        "crashed": false
+      },
+      "result": {
+        "answer": "Full-time employees get 20 days of paid time off (PTO) per year. PTO accrues monthly and unused days roll over up to a maximum of 10 days into the next calendar year, with any balance above 10 days on December 31 being forfeited.",
+        "citations": [
+          "hr-pto"
+        ],
+        "latency_s": 6.437737125001149,
+        "input_tokens": 1744,
+        "output_tokens": 151,
+        "tool_calls": 1,
+        "error": null
+      },
+      "cost": 0.0024990000000000004
+    },
+    {
+      "grade": {
+        "id": "q-pto-rollover",
+        "answer_ok": true,
+        "missing_facts": [],
+        "citation_ok": true,
+        "crashed": false
+      },
+      "result": {
+        "answer": "You can roll over up to a maximum of 10 days of unused PTO to the next calendar year. Any balance above 10 days on December 31 is forfeited.",
+        "citations": [
+          "hr-pto"
+        ],
+        "latency_s": 3.1988321249955334,
+        "input_tokens": 1755,
+        "output_tokens": 123,
+        "tool_calls": 1,
+        "error": null
+      },
+      "cost": 0.00237
+    },
+    {
+      "grade": {
+        "id": "q-office-days",
+        "answer_ok": false,
+        "missing_facts": [
+          "Tuesday",
+          "Wednesday"
+        ],
+        "citation_ok": false,
+        "crashed": false
+      },
+      "result": {
+        "answer": "I don't have access to your personal schedule or office attendance requirements. Please check your employment contract, company handbook, or contact your HR department or manager for information about your specific office attendance expectations.",
+        "citations": [],
+        "latency_s": 2.6070435000001453,
+        "input_tokens": 717,
+        "output_tokens": 93,
+        "tool_calls": 0,
+        "error": null
+      },
+      "cost": 0.0011819999999999999
+    },
+    {
+      "grade": {
+        "id": "q-parental",
+        "answer_ok": true,
+        "missing_facts": [],
+        "citation_ok": true,
+        "crashed": false
+      },
+      "result": {
+        "answer": "Meridian Robotics offers 16 weeks of fully paid parental leave to all new parents, regardless of gender. The leave must be taken within 12 months of the birth or adoption. An additional 4 weeks of unpaid leave may also be requested.",
+        "citations": [
+          "hr-parental"
+        ],
+        "latency_s": 3.571489499998279,
+        "input_tokens": 1759,
+        "output_tokens": 132,
+        "tool_calls": 1,
+        "error": null
+      },
+      "cost": 0.002419
+    },
+    {
+      "grade": {
+        "id": "q-atlas-payload",
+        "answer_ok": true,
+        "missing_facts": [],
+        "citation_ok": true,
+        "crashed": false
+      },
+      "result": {
+        "answer": "The payload capacity of the Atlas-7 arm is 12 kg.",
+        "citations": [
+          "prod-atlas-specs"
+        ],
+        "latency_s": 2.836755250027636,
+        "input_tokens": 1746,
+        "output_tokens": 92,
+        "tool_calls": 1,
+        "error": null
+      },
+      "cost": 0.002206
+    },
+    {
+      "grade": {
+        "id": "q-atlas-battery-life",
+        "answer_ok": true,
+        "missing_facts": [],
+        "citation_ok": true,
+        "crashed": false
+      },
+      "result": {
+        "answer": "The Atlas-7 battery lasts up to 4 hours of continuous operation at rated load and costs $1,200. The battery pack is sold separately and takes 90 minutes to charge from empty to full.",
+        "citations": [
+          "prod-atlas-battery"
+        ],
+        "latency_s": 3.9153905829880387,
+        "input_tokens": 2103,
+        "output_tokens": 205,
+        "tool_calls": 2,
+        "error": null
+      },
+      "cost": 0.0031279999999999997
+    },
+    {
+      "grade": {
+        "id": "q-titan-speed",
+        "answer_ok": true,
+        "missing_facts": [],
+        "citation_ok": true,
+        "crashed": false
+      },
+      "result": {
+        "answer": "The Titan-3 mobile base has a top speed of 1.8 meters per second.",
+        "citations": [
+          "prod-titan-specs"
+        ],
+        "latency_s": 2.5627506249875296,
+        "input_tokens": 1731,
+        "output_tokens": 99,
+        "tool_calls": 1,
+        "error": null
+      },
+      "cost": 0.0022259999999999997
+    },
+    {
+      "grade": {
+        "id": "q-warranty",
+        "answer_ok": true,
+        "missing_facts": [],
+        "citation_ok": true,
+        "crashed": false
+      },
+      "result": {
+        "answer": "All Meridian Robotics hardware carries a 2-year limited warranty covering manufacturing defects. Warranty claims are filed through the support portal and are typically processed within 5 business days.",
+        "citations": [
+          "sup-warranty"
+        ],
+        "latency_s": 3.2868746660242323,
+        "input_tokens": 1753,
+        "output_tokens": 166,
+        "tool_calls": 1,
+        "error": null
+      },
+      "cost": 0.0025830000000000002
+    },
+    {
+      "grade": {
+        "id": "q-api-ratelimit",
+        "answer_ok": true,
+        "missing_facts": [],
+        "citation_ok": true,
+        "crashed": false
+      },
+      "result": {
+        "answer": "The rate limits on the control API are 100 requests per second per device. This applies to the REST API exposed by both the Atlas-7 and Titan-3 robots.",
+        "citations": [
+          "eng-api"
+        ],
+        "latency_s": 3.0488890839915257,
+        "input_tokens": 1762,
+        "output_tokens": 112,
+        "tool_calls": 1,
+        "error": null
+      },
+      "cost": 0.002322
+    },
+    {
+      "grade": {
+        "id": "q-combo",
+        "answer_ok": true,
+        "missing_facts": [],
+        "citation_ok": true,
+        "crashed": false
+      },
+      "result": {
+        "answer": "Yes, the Titan-3 can carry the Atlas-7 arm. The Titan-3 mobile base has a payload capacity of 80 kg and is compatible with the Atlas-7 arm through the standard mounting plate. The Python SDK requires Python 3.10 or newer.",
+        "citations": [
+          "prod-titan-specs",
+          "eng-api"
+        ],
+        "latency_s": 3.741758165997453,
+        "input_tokens": 2111,
+        "output_tokens": 239,
+        "tool_calls": 2,
+        "error": null
+      },
+      "cost": 0.003306
+    }
+  ]
+}
