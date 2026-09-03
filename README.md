@@ -67,7 +67,16 @@ docker compose up -d
 - [x] pgvector retrieval
 - [x] PyTorch reranker as a tool
 - [x] Shared search tool
-- [ ] LangGraph agent (baseline)
-- [ ] Eval harness
-- [ ] Remaining 5 frameworks
-- [ ] Results table
+- [x] Eval harness + comparison table
+- [x] LangGraph agent (baseline)
+- [x] CrewAI agent
+- [ ] Remaining 4 frameworks (AutoGen, OpenAI Agents SDK, Pydantic AI, LlamaIndex)
+
+## Results
+
+<!-- RESULTS:START -->
+| Framework | Task success | Citations | Reliability | Avg latency | Avg tool calls | Cost / 10 Q |
+|---|---|---|---|---|---|---|
+| langgraph | 100% | 100% | 100% | 4.47s | 1.1 | $0.0263 |
+| crewai | 100% | 100% | 100% | 3.40s | 1.1 | $0.0338 |
+<!-- RESULTS:END -->
