@@ -18,7 +18,7 @@ from autogen_ext.models.anthropic import AnthropicChatCompletionClient
 from shared.anthropic_compat import install as _install_compat
 from shared.config import MODEL, anthropic_headers
 from shared.contract import SYSTEM_PROMPT, Answer
-from shared.retrieval import search_documents
+from shared.search_client import search_documents
 from shared.runner import RunResult, format_hits
 
 # AutoGen hardcodes temperature=1.0; the installed Anthropic SDK rejects it.

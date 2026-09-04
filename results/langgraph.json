@@ -4,10 +4,10 @@
     "task_success": 1.0,
     "citation_accuracy": 1.0,
     "reliability": 1.0,
-    "avg_latency_s": 4.468593804293778,
-    "p95_latency_s": 7.720915124984458,
+    "avg_latency_s": 5.50149842920946,
+    "p95_latency_s": 7.671981458028313,
     "avg_tool_calls": 1.1,
-    "total_cost_usd": 0.026274,
+    "total_cost_usd": 0.02628,
     "n": 10
   },
   "rows": [
@@ -24,7 +24,7 @@
         "citations": [
           "hr-pto"
         ],
-        "latency_s": 7.720915124984458,
+        "latency_s": 7.671981458028313,
         "input_tokens": 1874,
         "output_tokens": 153,
         "tool_calls": 1,
@@ -41,17 +41,17 @@
         "crashed": false
       },
       "result": {
-        "answer": "You can roll over up to 10 days of unused PTO to the next calendar year. Any balance above 10 days on December 31 is forfeited.",
+        "answer": "You can roll over up to a maximum of 10 days of unused PTO to the next calendar year. Any balance above 10 days on December 31 is forfeited.",
         "citations": [
           "hr-pto"
         ],
-        "latency_s": 3.865211750002345,
-        "input_tokens": 1889,
-        "output_tokens": 119,
+        "latency_s": 5.299284542008536,
+        "input_tokens": 1885,
+        "output_tokens": 125,
         "tool_calls": 1,
         "error": null
       },
-      "cost": 0.002484
+      "cost": 0.00251
     },
     {
       "grade": {
@@ -62,17 +62,17 @@
         "crashed": false
       },
       "result": {
-        "answer": "You are expected in the office on Tuesday and Wednesday. The remaining three days of the week may be worked remotely. If you need a fully remote arrangement, that requires director-level approval and is reviewed every six months.",
+        "answer": "You are expected in the office on Tuesday and Wednesday. The remaining three days (Monday, Thursday, and Friday) may be worked remotely under Meridian Robotics' hybrid work model. Fully remote arrangements require director-level approval and are reviewed every six months.",
         "citations": [
           "hr-remote"
         ],
-        "latency_s": 4.9781426249828655,
-        "input_tokens": 1874,
-        "output_tokens": 147,
+        "latency_s": 4.46391637501074,
+        "input_tokens": 1892,
+        "output_tokens": 159,
         "tool_calls": 1,
         "error": null
       },
-      "cost": 0.002609
+      "cost": 0.002687
     },
     {
       "grade": {
@@ -87,13 +87,13 @@
         "citations": [
           "hr-parental"
         ],
-        "latency_s": 3.953018875006819,
-        "input_tokens": 1863,
+        "latency_s": 6.142288000002736,
+        "input_tokens": 1888,
         "output_tokens": 131,
         "tool_calls": 1,
         "error": null
       },
-      "cost": 0.0025180000000000003
+      "cost": 0.002543
     },
     {
       "grade": {
@@ -104,17 +104,17 @@
         "crashed": false
       },
       "result": {
-        "answer": "The Atlas-7 arm has a payload capacity of 12 kg.",
+        "answer": "The payload capacity of the Atlas-7 arm is 12 kg.",
         "citations": [
           "prod-atlas-specs"
         ],
-        "latency_s": 3.3440057080006227,
-        "input_tokens": 1865,
-        "output_tokens": 93,
+        "latency_s": 3.5388315000163857,
+        "input_tokens": 1876,
+        "output_tokens": 92,
         "tool_calls": 1,
         "error": null
       },
-      "cost": 0.00233
+      "cost": 0.002336
     },
     {
       "grade": {
@@ -125,17 +125,17 @@
         "crashed": false
       },
       "result": {
-        "answer": "The Atlas-7 battery lasts up to 4 hours of continuous operation at rated load and costs $1,200. The battery pack is sold separately and takes 90 minutes to charge from empty to full.",
+        "answer": "The Atlas-7 battery pack lasts up to 4 hours of continuous operation at rated load and costs $1,200. The battery pack is sold separately and takes 90 minutes to charge from empty to full.",
         "citations": [
           "prod-atlas-battery"
         ],
-        "latency_s": 4.198447041999316,
+        "latency_s": 5.804854250018252,
         "input_tokens": 1915,
-        "output_tokens": 150,
+        "output_tokens": 162,
         "tool_calls": 1,
         "error": null
       },
-      "cost": 0.002665
+      "cost": 0.002725
     },
     {
       "grade": {
@@ -150,7 +150,7 @@
         "citations": [
           "prod-titan-specs"
         ],
-        "latency_s": 3.448500583996065,
+        "latency_s": 6.83629233299871,
         "input_tokens": 1861,
         "output_tokens": 99,
         "tool_calls": 1,
@@ -169,15 +169,16 @@
       "result": {
         "answer": "All Meridian Robotics hardware carries a 2-year limited warranty covering manufacturing defects. Warranty claims are filed through the support portal and are typically processed within 5 business days.",
         "citations": [
-          "sup-warranty"
+          "sup-warranty",
+          "prod-atlas-specs"
         ],
-        "latency_s": 4.228639499982819,
-        "input_tokens": 1883,
-        "output_tokens": 167,
+        "latency_s": 5.017473709012847,
+        "input_tokens": 1870,
+        "output_tokens": 140,
         "tool_calls": 1,
         "error": null
       },
-      "cost": 0.002718
+      "cost": 0.00257
     },
     {
       "grade": {
@@ -192,13 +193,13 @@
         "citations": [
           "eng-api"
         ],
-        "latency_s": 3.83193516699248,
-        "input_tokens": 1892,
+        "latency_s": 3.8926647919870447,
+        "input_tokens": 1851,
         "output_tokens": 112,
         "tool_calls": 1,
         "error": null
       },
-      "cost": 0.002452
+      "cost": 0.002411
     },
     {
       "grade": {
@@ -209,12 +210,12 @@
         "crashed": false
       },
       "result": {
-        "answer": "Yes, the Titan-3 can carry the Atlas-7 arm. The Titan-3 has a payload capacity of 80 kg and is compatible with the Atlas-7 arm through the standard mounting plate. The SDK requires Python 3.10 or newer.",
+        "answer": "Yes, the Titan-3 can carry the Atlas-7 arm. The Titan-3 mobile base has a payload capacity of 80 kg and is compatible with the Atlas-7 arm through the standard mounting plate. The SDK requires Python 3.10 or newer.",
         "citations": [
           "prod-titan-specs",
           "eng-api"
         ],
-        "latency_s": 5.117121666989988,
+        "latency_s": 6.347397333011031,
         "input_tokens": 2243,
         "output_tokens": 252,
         "tool_calls": 2,

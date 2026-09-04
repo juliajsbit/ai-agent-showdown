@@ -1,13 +1,13 @@
 {
   "summary": {
-    "framework": "autogen",
+    "framework": "openai_sdk",
     "task_success": 1.0,
     "citation_accuracy": 1.0,
     "reliability": 1.0,
-    "avg_latency_s": 3.5180250791017897,
-    "p95_latency_s": 5.992052665998926,
+    "avg_latency_s": 3.9394567877054216,
+    "p95_latency_s": 7.448871500004316,
     "avg_tool_calls": 1.1,
-    "total_cost_usd": 0.026875,
+    "total_cost_usd": 0.026505,
     "n": 10
   },
   "rows": [
@@ -20,17 +20,17 @@
         "crashed": false
       },
       "result": {
-        "answer": "Full-time employees at Meridian Robotics get 20 days of paid time off (PTO) per year. PTO accrues monthly and unused days roll over up to a maximum of 10 days into the next calendar year.",
+        "answer": "Full-time employees at Meridian Robotics accrue 20 days of paid time off per year.",
         "citations": [
           "hr-pto"
         ],
-        "latency_s": 3.1612431250105146,
-        "input_tokens": 1974,
-        "output_tokens": 134,
+        "latency_s": 2.281378583982587,
+        "input_tokens": 1976,
+        "output_tokens": 105,
         "tool_calls": 1,
         "error": null
       },
-      "cost": 0.002644
+      "cost": 0.0025009999999999998
     },
     {
       "grade": {
@@ -41,17 +41,17 @@
         "crashed": false
       },
       "result": {
-        "answer": "You can roll over up to a maximum of 10 unused PTO days to the next calendar year. Any balance above 10 days on December 31 is forfeited.",
+        "answer": "You can roll over up to a maximum of 10 unused PTO days into the next calendar year. Any balance above 10 days on December 31 is forfeited.",
         "citations": [
           "hr-pto"
         ],
-        "latency_s": 4.500461834017187,
-        "input_tokens": 1989,
-        "output_tokens": 119,
+        "latency_s": 5.066348000022117,
+        "input_tokens": 2006,
+        "output_tokens": 134,
         "tool_calls": 1,
         "error": null
       },
-      "cost": 0.002584
+      "cost": 0.002676
     },
     {
       "grade": {
@@ -62,17 +62,17 @@
         "crashed": false
       },
       "result": {
-        "answer": "You are expected in the office on Tuesday and Wednesday. The remaining three days of the week may be worked remotely, unless you have a fully remote arrangement approved at the director level.",
+        "answer": "You are expected in the office on Tuesday and Wednesday. The remaining three days of the week may be worked remotely. Fully remote arrangements require director-level approval and are reviewed every six months.",
         "citations": [
           "hr-remote"
         ],
-        "latency_s": 2.761106165999081,
-        "input_tokens": 1981,
-        "output_tokens": 127,
+        "latency_s": 5.62874541702331,
+        "input_tokens": 1983,
+        "output_tokens": 130,
         "tool_calls": 1,
         "error": null
       },
-      "cost": 0.0026160000000000003
+      "cost": 0.002633
     },
     {
       "grade": {
@@ -87,13 +87,13 @@
         "citations": [
           "hr-parental"
         ],
-        "latency_s": 5.992052665998926,
-        "input_tokens": 1963,
+        "latency_s": 4.300297416019021,
+        "input_tokens": 1965,
         "output_tokens": 134,
         "tool_calls": 1,
         "error": null
       },
-      "cost": 0.002633
+      "cost": 0.002635
     },
     {
       "grade": {
@@ -108,13 +108,13 @@
         "citations": [
           "prod-atlas-specs"
         ],
-        "latency_s": 2.2537389999779407,
-        "input_tokens": 1984,
-        "output_tokens": 115,
+        "latency_s": 2.2531669169839006,
+        "input_tokens": 1967,
+        "output_tokens": 96,
         "tool_calls": 1,
         "error": null
       },
-      "cost": 0.002559
+      "cost": 0.002447
     },
     {
       "grade": {
@@ -129,13 +129,13 @@
         "citations": [
           "prod-atlas-battery"
         ],
-        "latency_s": 2.496747208002489,
-        "input_tokens": 2015,
+        "latency_s": 2.4588622920273338,
+        "input_tokens": 2017,
         "output_tokens": 126,
         "tool_calls": 1,
         "error": null
       },
-      "cost": 0.0026449999999999998
+      "cost": 0.002647
     },
     {
       "grade": {
@@ -150,13 +150,13 @@
         "citations": [
           "prod-titan-specs"
         ],
-        "latency_s": 2.4531522920005955,
-        "input_tokens": 1980,
-        "output_tokens": 122,
+        "latency_s": 4.6094662089890335,
+        "input_tokens": 1963,
+        "output_tokens": 103,
         "tool_calls": 1,
         "error": null
       },
-      "cost": 0.00259
+      "cost": 0.0024779999999999997
     },
     {
       "grade": {
@@ -171,13 +171,13 @@
         "citations": [
           "sup-warranty"
         ],
-        "latency_s": 5.120231457985938,
-        "input_tokens": 1983,
-        "output_tokens": 108,
+        "latency_s": 1.947317459009355,
+        "input_tokens": 1972,
+        "output_tokens": 95,
         "tool_calls": 1,
         "error": null
       },
-      "cost": 0.002523
+      "cost": 0.002447
     },
     {
       "grade": {
@@ -188,17 +188,17 @@
         "crashed": false
       },
       "result": {
-        "answer": "The rate limits on the control API are 100 requests per second per device.",
+        "answer": "The rate limits on the Control API are 100 requests per second per device.",
         "citations": [
           "eng-api"
         ],
-        "latency_s": 2.7590646670141723,
-        "input_tokens": 1992,
+        "latency_s": 7.448871500004316,
+        "input_tokens": 1994,
         "output_tokens": 92,
         "tool_calls": 1,
         "error": null
       },
-      "cost": 0.0024519999999999998
+      "cost": 0.002454
     },
     {
       "grade": {
@@ -209,18 +209,19 @@
         "crashed": false
       },
       "result": {
-        "answer": "Yes, the Titan-3 can carry the Atlas-7 arm. The Titan-3 has a payload capacity of 80 kg and is compatible with the Atlas-7 arm through the standard mounting plate. The Atlas-7 arm weighs within this capacity (rated power draw of 350 watts, with 12 kg payload capacity). The Python SDK requires Python 3.10 or newer.",
+        "answer": "Yes, the Titan-3 can carry the Atlas-7 arm. The Titan-3 has a payload capacity of 80 kg and is compatible with the Atlas-7 arm through the standard mounting plate. The Atlas-7 arm has a payload capacity of 12 kg. The Python SDK requires Python 3.10 or newer.",
         "citations": [
           "prod-titan-specs",
+          "prod-atlas-specs",
           "eng-api"
         ],
-        "latency_s": 3.682452375011053,
-        "input_tokens": 2344,
-        "output_tokens": 257,
+        "latency_s": 3.400114082993241,
+        "input_tokens": 2322,
+        "output_tokens": 253,
         "tool_calls": 2,
         "error": null
       },
-      "cost": 0.0036290000000000003
+      "cost": 0.003587
     }
   ]
 }

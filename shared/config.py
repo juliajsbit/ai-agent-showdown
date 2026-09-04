@@ -29,6 +29,9 @@ EMBED_DIM = 384
 # torch reranker service (reranker/app.py)
 RERANKER_URL = os.getenv("SHOWDOWN_RERANKER_URL", "http://127.0.0.1:8100")
 
+# retrieval service (services/retrieval_app.py) - what the frameworks call
+RETRIEVAL_URL = os.getenv("SHOWDOWN_RETRIEVAL_URL", "http://127.0.0.1:8200")
+
 # One model for all six frameworks - otherwise we'd be measuring the model, not
 # the framework.
 MODEL = os.getenv("SHOWDOWN_MODEL", "claude-haiku-4-5")

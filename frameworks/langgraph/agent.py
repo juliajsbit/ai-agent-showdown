@@ -15,7 +15,7 @@ from langgraph.prebuilt import create_react_agent
 
 from shared.config import MODEL, anthropic_headers
 from shared.contract import SYSTEM_PROMPT, Answer
-from shared.retrieval import search_documents
+from shared.search_client import search_documents
 from shared.runner import RunResult, format_hits
 
 load_dotenv()

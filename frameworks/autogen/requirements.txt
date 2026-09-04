@@ -1,0 +1,6 @@
+autogen-agentchat
+autogen-ext[anthropic]
+httpx
+pydantic
+python-dotenv
+tiktoken

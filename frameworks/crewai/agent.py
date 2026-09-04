@@ -12,7 +12,7 @@ from crewai.tools import tool
 
 from shared.config import MODEL, anthropic_headers
 from shared.contract import SYSTEM_PROMPT, Answer
-from shared.retrieval import search_documents
+from shared.search_client import search_documents
 from shared.runner import RunResult, format_hits
 
 # CrewAI gives no easy per-run tool-call count, so we count calls ourselves.

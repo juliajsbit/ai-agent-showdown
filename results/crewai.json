@@ -4,8 +4,8 @@
     "task_success": 1.0,
     "citation_accuracy": 1.0,
     "reliability": 1.0,
-    "avg_latency_s": 3.3993560458970022,
-    "p95_latency_s": 10.477427875011927,
+    "avg_latency_s": 4.003173695798614,
+    "p95_latency_s": 7.237875624996377,
     "avg_tool_calls": 1.1,
     "total_cost_usd": 0.033751,
     "n": 10
@@ -24,7 +24,7 @@
         "citations": [
           "hr-pto"
         ],
-        "latency_s": 10.477427875011927,
+        "latency_s": 5.843339624989312,
         "input_tokens": 2598,
         "output_tokens": 172,
         "tool_calls": 1,
@@ -45,7 +45,7 @@
         "citations": [
           "hr-pto"
         ],
-        "latency_s": 2.569517874973826,
+        "latency_s": 2.7579752919846214,
         "input_tokens": 2613,
         "output_tokens": 152,
         "tool_calls": 1,
@@ -66,7 +66,7 @@
         "citations": [
           "hr-remote"
         ],
-        "latency_s": 2.5035695420228876,
+        "latency_s": 2.7623942909995094,
         "input_tokens": 2584,
         "output_tokens": 129,
         "tool_calls": 1,
@@ -87,7 +87,7 @@
         "citations": [
           "hr-parental"
         ],
-        "latency_s": 2.6414272080000956,
+        "latency_s": 2.765323208994232,
         "input_tokens": 2587,
         "output_tokens": 151,
         "tool_calls": 1,
@@ -108,7 +108,7 @@
         "citations": [
           "prod-atlas-specs"
         ],
-        "latency_s": 2.722728624998126,
+        "latency_s": 2.455827166006202,
         "input_tokens": 2589,
         "output_tokens": 121,
         "tool_calls": 1,
@@ -129,7 +129,7 @@
         "citations": [
           "prod-atlas-battery"
         ],
-        "latency_s": 2.5899837919860147,
+        "latency_s": 3.6869862920138985,
         "input_tokens": 2622,
         "output_tokens": 138,
         "tool_calls": 1,
@@ -150,7 +150,7 @@
         "citations": [
           "prod-titan-specs"
         ],
-        "latency_s": 2.62608725001337,
+        "latency_s": 5.427135000005364,
         "input_tokens": 2585,
         "output_tokens": 130,
         "tool_calls": 1,
@@ -171,7 +171,7 @@
         "citations": [
           "sup-warranty"
         ],
-        "latency_s": 2.2158305839984678,
+        "latency_s": 4.752112874994054,
         "input_tokens": 2594,
         "output_tokens": 114,
         "tool_calls": 1,
@@ -192,7 +192,7 @@
         "citations": [
           "eng-api"
         ],
-        "latency_s": 2.2156551249790937,
+        "latency_s": 2.342767583002569,
         "input_tokens": 2616,
         "output_tokens": 111,
         "tool_calls": 1,
@@ -215,7 +215,7 @@
           "prod-atlas-specs",
           "eng-api"
         ],
-        "latency_s": 3.431332582986215,
+        "latency_s": 7.237875624996377,
         "input_tokens": 2943,
         "output_tokens": 266,
         "tool_calls": 2,

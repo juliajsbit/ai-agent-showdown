@@ -1,0 +1,5 @@
+crewai[anthropic]
+litellm
+httpx
+pydantic
+python-dotenv
