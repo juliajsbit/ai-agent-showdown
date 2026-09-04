@@ -2,6 +2,8 @@
 
 One agent task, built in 6 frameworks, run through one eval harness.
 
+![Four frameworks compared: same task, all 100%, the real differences are dependency isolation, cost, and setup pain](posts/01-four-frameworks.png)
+
 The task: a support agent that answers questions about a company knowledge base
 (the fictional "Meridian Robotics"). Same task, same tools, same model, same
 metrics for every framework - so the comparison measures the framework, not the

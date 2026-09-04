@@ -5,28 +5,27 @@ Repo link goes in the first comment, not the body.
 
 ---
 
-Two of these agent frameworks refuse to live in the same Python environment.
+Hey folks. I've been teaching myself how AI agents actually work under the hood, and I got curious about one thing: if I build the exact same agent in different frameworks, which one actually holds up?
 
-OpenAI Agents SDK wants openai 3.x. CrewAI wants 2.x. Installing one broke the other, down to a protobuf clash that stopped CrewAI from even importing.
+So I made a little project to find out.
 
-That was the real lesson from building the same agent in four frameworks this week.
+Here's the setup. It's a support agent that answers questions from a company knowledge base. It searches the documents (vector search plus a reranker), then answers with sources. Everyone gets the same model (Claude Haiku 4.5) and the same test set of 10 questions. The only thing I swap is the framework.
 
-The task was identical: a support agent answering from a document knowledge base, one model (Claude Haiku 4.5), one eval over 10 questions. All four scored 100%. So accuracy told me nothing.
+So far I've done four: LangGraph, CrewAI, AutoGen, and the OpenAI Agents SDK.
 
-What did:
+Here's what surprised me.
 
-Dependency isolation. The fix was one venv per framework, plus moving retrieval into a shared service so the framework envs stay thin. That is the gap between a demo and something you can ship and maintain.
+All four got the answers right. 100% each. I really thought accuracy would be the interesting part, and it just... wasn't.
 
-Structured output. LangGraph and CrewAI return a typed object out of the box. AutoGen and OpenAI SDK do not, at least not reliably with Claude, so I parsed JSON by hand for both.
+The real differences were the unglamorous, practical stuff:
 
-Setup pain. LangGraph: an agent in one function, about 15 minutes. The other three each cost an afternoon of debugging before the first correct answer.
+- Two of them refuse to share a Python environment. OpenAI's SDK wants one version of a library, CrewAI wants another, and installing one quietly broke the other. I ended up giving each framework its own isolated setup.
+- Only half of them return a clean structured answer with Claude. For the other two I had to parse it by hand.
+- LangGraph was running in about 15 minutes. The other three each cost me an afternoon of debugging before the first correct answer.
+- Cost was close, but CrewAI came out about 30% pricier for the same answers.
 
-Cost and speed were close (numbers in the image). CrewAI ran about 30% pricier for identical output.
+My honest takeaway so far: for a simple agent, the framework barely changes the quality. What it changes is how much it fights you, what it costs, and whether it plays nice with the rest of your stack.
 
-For a single tool-using agent, they converge on quality. What you actually pick is dependency sanity, cost, and how hard the framework fights you on day one.
-
-4 down, 2 to go: Pydantic AI and LlamaIndex. Repo in the comments.
-
-Which of those two do you expect to behave?
+Two more to go (Pydantic AI and LlamaIndex). It's all public, repo in the comments, and I'm genuinely figuring this out as I go. If you've shipped with any of these, I'd love to hear what tripped you up.
 
 #AIEngineering #LLM #Agents
