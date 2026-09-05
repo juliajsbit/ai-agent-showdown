@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root{
+    --bg:#0d1117; --panel:#161b22; --line:#232a33;
+    --ink:#e6edf3; --dim:#8b949e; --accent:#58a6ff;
+    --good:#3fb950; --warn:#d29922; --purple:#bc8cff;
+    --mono:"SF Mono","JetBrains Mono",ui-monospace,Menlo,monospace;
+    --sans:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  }
+  body{ width:1080px; height:1350px; background:var(--bg); color:var(--ink);
+    font-family:var(--sans); padding:44px 56px; display:flex; flex-direction:column; }
+  .kicker{ font-family:var(--mono); color:var(--accent); font-size:20px; letter-spacing:1px; }
+  h1{ font-size:43px; line-height:1.08; margin-top:10px; font-weight:800; letter-spacing:-1px; }
+  h1 .hl{ color:var(--purple); }
+
+  .split{ margin-top:18px; display:grid; grid-template-columns:1fr; gap:14px; }
+  .lbl{ font-family:var(--mono); font-size:17px; color:var(--dim); margin-bottom:6px; }
+  .code{ background:var(--panel); border:1px solid var(--line); border-radius:14px;
+    padding:14px 20px; font-family:var(--mono); font-size:18px; line-height:1.45; }
+  .code .k{ color:var(--purple); } .code .s{ color:var(--good); }
+  .code .c{ color:var(--dim); } .code .f{ color:var(--accent); }
+
+  .graphwrap{ margin-top:14px; background:var(--panel); border:1px solid var(--line);
+    border-radius:14px; padding:14px 18px 8px; }
+  svg{ width:100%; height:auto; display:block; }
+  .nlab{ font-family:var(--mono); font-size:22px; fill:var(--ink); }
+  .nlab.small{ font-size:18px; }
+  .elab{ font-family:var(--mono); font-size:17px; fill:var(--dim); }
+  .note{ font-family:var(--mono); font-size:17px; fill:var(--warn); }
+
+  .legend{ margin-top:12px; display:flex; gap:26px; font-family:var(--mono);
+    font-size:17px; color:var(--dim); align-items:center; flex-wrap:wrap; }
+  .legend b{ color:var(--ink); font-weight:600; }
+
+  .outgrow{ margin-top:14px; background:var(--panel); border:1px solid var(--line);
+    border-radius:14px; padding:14px 20px; }
+  .rows{ display:flex; flex-direction:column; gap:7px; }
+  .row{ display:flex; align-items:center; gap:12px; font-size:19px; }
+  .row .n{ font-family:var(--mono); font-size:15px; color:var(--purple);
+    border:1px solid #3a424d; border-radius:7px; width:27px; height:27px;
+    display:flex; align-items:center; justify-content:center; flex:0 0 27px; }
+  .tail{ margin-top:10px; font-family:var(--mono); font-size:16px; color:var(--dim); line-height:1.4; }
+
+  .punch{ margin-top:auto; background:linear-gradient(90deg, rgba(188,140,255,.12), rgba(88,166,255,.07));
+    border:1px solid var(--line); border-radius:14px; padding:18px 22px; }
+  .punch .big{ font-size:25px; font-weight:700; line-height:1.3; }
+  .punch .big em{ font-style:normal; color:var(--purple); }
+  .foot{ margin-top:16px; display:flex; justify-content:space-between;
+    font-family:var(--mono); font-size:18px; color:var(--dim); }
+  .foot .repo{ color:var(--ink); }
+</style>
+</head>
+<body>
+  <div class="kicker">AGENT FRAMEWORK SHOWDOWN &middot; UNDER THE HOOD</div>
+  <h1>One function built me an agent.<br><span class="hl">This is the graph it built.</span></h1>
+
+  <div class="split">
+    <div>
+      <div class="lbl">what I wrote</div>
+      <div class="code">
+<span class="f">agent</span> = <span class="f">create_react_agent</span>(<br>
+&nbsp;&nbsp;llm,<br>
+&nbsp;&nbsp;tools=[search_knowledge_base],<br>
+&nbsp;&nbsp;prompt=SYSTEM_PROMPT,<br>
+&nbsp;&nbsp;response_format=Answer,<br>
+)
+      </div>
+    </div>
+  </div>
+
+  <div class="graphwrap">
+    <div class="lbl">what actually runs (pulled from the live agent)</div>
+    <svg viewBox="0 0 960 430" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="ah" markerWidth="11" markerHeight="11" refX="9" refY="4" orient="auto">
+          <path d="M0,0 L9,4 L0,8 z" fill="#8b949e"/>
+        </marker>
+        <marker id="ahp" markerWidth="11" markerHeight="11" refX="9" refY="4" orient="auto">
+          <path d="M0,0 L9,4 L0,8 z" fill="#bc8cff"/>
+        </marker>
+      </defs>
+
+      <!-- start -->
+      <rect x="150" y="8" width="200" height="46" rx="23" fill="none" stroke="#3a424d" stroke-width="2"/>
+      <text class="nlab small" x="250" y="37" text-anchor="middle">__start__</text>
+      <line x1="250" y1="54" x2="250" y2="106" stroke="#8b949e" stroke-width="2.5" marker-end="url(#ah)"/>
+
+      <!-- agent -->
+      <rect x="140" y="112" width="220" height="70" rx="14" fill="#1c2430" stroke="#58a6ff" stroke-width="2.5"/>
+      <text class="nlab" x="250" y="147" text-anchor="middle">agent</text>
+      <text class="elab" x="250" y="168" text-anchor="middle">the model thinks</text>
+
+      <!-- tools -->
+      <rect x="640" y="112" width="220" height="70" rx="14" fill="#1c2430" stroke="#3fb950" stroke-width="2.5"/>
+      <text class="nlab" x="750" y="147" text-anchor="middle">tools</text>
+      <text class="elab" x="750" y="168" text-anchor="middle">your search runs</text>
+
+      <!-- agent -> tools (dashed, top arc) -->
+      <path d="M360,132 C470,100 530,100 640,132" fill="none" stroke="#bc8cff" stroke-width="2.5"
+            stroke-dasharray="7 6" marker-end="url(#ahp)"/>
+      <text class="note" x="500" y="98" text-anchor="middle">"I need the docs"</text>
+
+      <!-- tools -> agent (solid, bottom arc) -->
+      <path d="M640,166 C530,198 470,198 360,166" fill="none" stroke="#8b949e" stroke-width="2.5"
+            marker-end="url(#ah)"/>
+      <text class="elab" x="500" y="216" text-anchor="middle">documents come back</text>
+
+      <!-- agent -> structured (dashed down) -->
+      <line x1="250" y1="182" x2="250" y2="252" stroke="#bc8cff" stroke-width="2.5"
+            stroke-dasharray="7 6" marker-end="url(#ahp)"/>
+      <text class="note" x="268" y="222" text-anchor="start">"I'm done"</text>
+
+      <!-- structured -->
+      <rect x="60" y="258" width="420" height="70" rx="14" fill="#1c2430" stroke="#d29922" stroke-width="2.5"/>
+      <text class="nlab small" x="270" y="290" text-anchor="middle">generate_structured_response</text>
+      <text class="elab" x="270" y="312" text-anchor="middle">forces the answer into your schema</text>
+
+      <!-- structured -> end -->
+      <line x1="270" y1="328" x2="270" y2="372" stroke="#8b949e" stroke-width="2.5" marker-end="url(#ah)"/>
+      <rect x="170" y="378" width="200" height="46" rx="23" fill="none" stroke="#3a424d" stroke-width="2"/>
+      <text class="nlab small" x="270" y="407" text-anchor="middle">__end__</text>
+    </svg>
+
+    <div class="legend">
+      <span><b style="color:#bc8cff">- - -</b> dashed = the model decides, not your code</span>
+      <span><b>5 nodes.</b> That is the whole agent.</span>
+    </div>
+  </div>
+
+  <div class="outgrow">
+    <div class="lbl" style="margin-bottom:12px">when the helper stops being enough</div>
+    <div class="rows">
+      <div class="row"><span class="n">1</span><span>a step that needs human approval before it runs</span></div>
+      <div class="row"><span class="n">2</span><span>a second agent that takes over part of the job</span></div>
+      <div class="row"><span class="n">3</span><span>retry with a different strategy when verification fails</span></div>
+    </div>
+    <div class="tail">All three are new nodes and new edges. That is the point where the graph stops being hidden.</div>
+  </div>
+
+  <div class="punch">
+    <div class="big">The magic is one loop and one decision. Once you need a second decision, you stop calling the helper and <em>write the nodes yourself.</em></div>
+  </div>
+  <div class="foot">
+    <span>build in public &middot; <span class="repo">github.com/juliajsbit/ai-agent-showdown</span></span>
+    <span>#AIEngineering</span>
+  </div>
+</body>
+</html>
